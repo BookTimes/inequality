@@ -1,36 +1,20 @@
-import java.util.Scanner;
+ x = int(input("Enter the value for x: "))
+ y = int(input("Enter the value for y: "))
 
-public class InequalityProof {
+ expression1 = abs(x) + abs(y)
+ expression2 = abs(x + y)
+ print(f'|x| + |y| = |{x}| + |{y}|')
+ print(f'          = {abs(x)} + {abs(y)}')
+ print(f'The value of |x| + |y| is: {expression1}\n\n')
 
-    public static void main(String[] args) {
-    while (true) {
-        Scanner scanner = new Scanner(System.in);
+ print(f'|x + y| = |{x} + {y}|')
+ print(f'        = |{x+y}|')
+ print(f'The value of |x + y| is: {expression2}\n\n')
 
-        System.out.print("Enter the value for x: ");
-        int x = scanner.nextInt();
+ if expression1 > expression2:
+     print('|x| + |y| is greater than |x + y|')
+ elif expression1 < expression2:
+     print('|x| + |y| is less than |x + y|')
+ else:
+     print('|x| + |y| is equal to |x + y|')
 
-        System.out.print("Enter the value for y: ");
-        int y = scanner.nextInt();
-
-        int expression1 = Math.abs(x) + Math.abs(y);
-        int expression2 = Math.abs(x + y);
-
-        System.out.println("|x| + |y| = |" + x + "| + |" + y + "|");
-        System.out.println("          = " + Math.abs(x) + " + " + Math.abs(y));
-        System.out.println("The value of |x| + |y| is: " + expression1 + "\n\n");
-
-        System.out.println("|x + y| = |" + x + " + " + y + "|");
-        System.out.println("        = |" + (x + y) + "|");
-        System.out.println("The value of |x + y| is: " + expression2 + "\n\n");
-
-        if (expression1 > expression2) {
-            System.out.println(expression1+ " > " + expression2);
-       }
-       else if (expression1 == expression2) {
-            System.out.println(expression1 + " = " + expression2);
-
-       }
-       System.out.println("As |x| + |y| ≥ |x + y|");
-}
-    }
-}
